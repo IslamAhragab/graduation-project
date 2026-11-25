@@ -1,17 +1,18 @@
 .signup-card {
   width: 100%;
-  max-width: 1180px;
-  min-height: 760px;
+  max-width: 100%;
+  min-height: 100vh;
   background-color: #ffffff;
-  border-radius: 28px;
+  border-radius: 0;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+  box-shadow: none;
 }
 
 /* ================= القسم الأيسر (النموذج) ================= */
 .signup-left-panel {
-  width: 48%;
+  width: 46%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,7 +124,9 @@
 /* ================= القسم الأيمن (كولاج السفر والطيارة) ================= */
 .signup-right-panel {
   position: relative;
-  width: 52%;
+  flex: 1;
+  width: 54%;
+  min-height: 100vh;
   background: linear-gradient(155deg, #67d3df 0%, #3ba8bd 45%, #1e3a4c 100%);
   border-top-left-radius: 170px;
   border-bottom-left-radius: 65px;
@@ -131,43 +134,43 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 40px;
+  padding: 44px;
 }
 
 .card-plane {
-  width: 265px;
-  height: 330px;
-  top: -10px;
-  right: 32px;
-  transform: rotate(10deg);
-  z-index: 2;
-}
-
-.card-globe-resort {
-  width: 265px;
-  height: 260px;
-  top: 32px;
-  left: 24px;
-  transform: rotate(-9deg);
-  z-index: 1;
-}
-
-.card-passport {
-  width: 245px;
-  height: 195px;
-  top: 280px;
-  left: 20px;
-  transform: rotate(-7deg);
+  width: 44%;
+  height: 33%;
+  top: 3%;
+  right: 10%;
+  transform: rotate(9deg);
   z-index: 3;
 }
 
+.card-globe-resort {
+  width: 43%;
+  height: 27%;
+  top: 5%;
+  left: 11%;
+  transform: rotate(-8deg);
+  z-index: 2;
+}
+
+.card-passport {
+  width: 41%;
+  height: 21%;
+  top: 29%;
+  left: 11%;
+  transform: rotate(-7deg);
+  z-index: 4;
+}
+
 .card-skyline {
-  width: 245px;
-  height: 210px;
-  top: 285px;
-  right: -12px;
-  transform: rotate(9deg);
-  z-index: 1;
+  width: 42%;
+  height: 22%;
+  top: 31%;
+  right: 10%;
+  transform: rotate(8deg);
+  z-index: 2;
 }
 
 .signup-overlay-gradient {
@@ -186,20 +189,22 @@
 @media (max-width: 960px) {
   .signup-card {
     flex-direction: column-reverse;
-    max-width: 520px;
+    min-height: 100vh;
   }
 
   .signup-left-panel {
     width: 100%;
-    padding: 36px 28px;
+    min-height: auto;
+    padding: 36px 24px;
   }
 
   .signup-right-panel {
     width: 100%;
-    min-height: 440px;
+    min-height: 460px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    padding: 32px 24px;
   }
 
   .signup-social-row {
